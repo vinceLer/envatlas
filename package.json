@@ -1,0 +1,24 @@
+{
+  "name": "envatlas",
+  "version": "1.0.0",
+  "description": "An intelligent CLI tool to analyze, validate, and synchronize your environment variables.",
+  "type": "module",
+  "bin": {
+    "env-atlas": "./src/index.ts"
+  },
+  "scripts": {
+    "envatlas": "tsx src/index.ts",
+    "envatlas:report": "tsx src/index.ts --report",
+    "envatlas:update": "tsx src/index.ts --update",
+    "envatlas:fix": "tsx src/index.ts --fix",
+
+    "envatlas:local": "tsx src/index.ts --env .env.local --fix",
+    "envatlas:dev": "tsx src/index.ts --env .env.development --fix",
+    "envatlas:staging": "tsx src/index.ts --env .env.staging --fix",
+    "envatlas:prod": "tsx src/index.ts --env .env.production --fix"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.3",
+    "tsx": "4.23.15"
+  }
+}
